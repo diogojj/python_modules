@@ -219,8 +219,8 @@ def main() -> None:
     print("=== Garden statistics ===")
 
     print("=== Check year-old")
-    print(f"Is 30 days more than a year? -> {Plant.is_year_old(30)}")
-    print(f"Is 400 days more than a year? -> {Plant.is_year_old(400)}")
+    print(f"Is 40 days more than a year? -> {Plant.is_year_old(40)}")
+    print(f"Is 370 days more than a year? -> {Plant.is_year_old(370)}")
 
     print("\n=== Flower")
     rose = Flower("Rose", "red")

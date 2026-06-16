@@ -1,21 +1,24 @@
-
-class plant:
-    def __init__(self, name, height, days):
-        self.name = name
-        self.height = height
-        self.days = days
-
-    def __show__(self):
-        print(f"{self.name}: {self.height} cm tall, {self.days} days old.")
+#!/usr/bin/env python3
 
 
-def main():
-    zucchini = plant("zucchini", 25, 22)
-    zucchini.__show__()
-    eggplant = plant("eggplant", 30, 30)
-    eggplant.__show__()
-    tomato = plant("tomato", 40, 40)
-    tomato.__show__()
+class Plant:
+    def __init__(self, name: str, height: float, days: int) -> None:
+        self.name: str = name
+        self.height: float = height
+        self.days: int = days
+
+    def show(self) -> None:
+        print(f"{self.name}: {self.height}cm, {self.days} days old")
+
+
+def main() -> None:
+    print("=== Garden Plant Registry ===")
+    zucchini = Plant("zucchini", 25, 22)
+    zucchini.show()
+    eggplant = Plant("eggplant", 30, 30)
+    eggplant.show()
+    tomato = Plant("tomato", 40, 40)
+    tomato.show()
 
 
 if __name__ == "__main__":

@@ -1,31 +1,39 @@
-class plant:
-    def __init__(self, name, height, days):
-        self.name = name
-        self.height = height
-        self.days = days
+#!/usr/bin/env python3
 
-    def grow(self, growth):
+
+class Plant:
+    def __init__(self, name: str, height: float, days: int) -> None:
+        self.name: str = name
+        self.height: float = height
+        self.days: int = days
+
+    def grow(self, growth: float) -> None:
         self.height = round(self.height + growth, 2)
 
-    def age(self, days):
+    def age(self, days: int) -> None:
         self.days += days
 
-    def __show__(self):
-        print(f"{self.name}: {self.height} cm tall, {self.days} days old.")
+    def show(self) -> None:
+        print(f"{self.name}: {self.height}cm, {self.days} days old")
 
 
-def main():
-    print("=== Welcome to the Plant Factory ===")
-    rose = plant("rose", 15, 10)
-    print(f"created: {rose.__show__()}")
-    tulip = plant("tulip", 10, 5)
-    print(f"created: {tulip.__show__()}")
-    sunflower = plant("sunflower", 20, 12)
-    print(f"created: {sunflower.__show__()}")
-    daisy = plant("daisy", 5, 2)
-    print(f"created: {daisy.__show__()}")
-    eggplant = plant("eggplant", 30, 30)
-    print(f"created: {eggplant.__show__()}")
+def main() -> None:
+    print("=== Plant Factory Output ===")
+    rose = Plant("rose", 15.0, 10)
+    print("Created: ", end="")
+    rose.show()
+    tulip = Plant("tulip", 10.0, 5)
+    print("Created: ", end="")
+    tulip.show()
+    sunflower = Plant("sunflower", 20.0, 12)
+    print("Created: ", end="")
+    sunflower.show()
+    daisy = Plant("daisy", 5.0, 2)
+    print("Created: ", end="")
+    daisy.show()
+    eggplant = Plant("eggplant", 30.0, 30)
+    print("Created: ", end="")
+    eggplant.show()
 
 
 if __name__ == "__main__":
