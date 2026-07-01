@@ -1,18 +1,17 @@
 import sys
-import typing
 
 
 def read_archive(filename: str) -> str | None:
     try:
-        f: typing.IO[str] = open(filename, "r")
+        f = open(filename, "r")
     except OSError as e:
         print(f"Error opening file '{filename}': {e}")
         return None
     content: str = f.read()
-    f.close()
     print("---")
     print(content, end="")
     print("---")
+    f.close()
     print(f"File '{filename}' closed.")
     return content
 
@@ -31,7 +30,7 @@ def save_archive(content: str) -> None:
         return
     print(f"Saving data to '{name}'")
     try:
-        f: typing.IO[str] = open(name, "w")
+        f = open(name, "w")
     except OSError as e:
         print(f"Error opening file '{name}': {e}")
         return

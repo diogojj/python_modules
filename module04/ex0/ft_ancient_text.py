@@ -1,10 +1,9 @@
 import sys
-import typing
 
 
 def recover(filename: str) -> None:
     try:
-        f: typing.IO[str] = open(filename, "r")
+        f = open(filename, "r")
     except OSError as e:
         print(f"Error opening file '{filename}': {e}")
         return

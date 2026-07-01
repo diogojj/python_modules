@@ -31,7 +31,12 @@ def main() -> None:
     print("Using 'secure_archive' to write previous content to a file:")
     body: str = result[1] if result[0] else ""
     print(secure_archive("preserved_copy.txt", "write", body))
-
+    with open("preserved_copy.txt", "r") as f:
+        content = f.read()
+        print(content)
+        print(f.closed)
+    print(f.closed)
+    
 
 if __name__ == "__main__":
     main()

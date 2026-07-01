@@ -1,0 +1,3 @@
+some test write file
+more lines of text
+.
